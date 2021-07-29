@@ -48,14 +48,14 @@ module.exports = {
     ***************************************************************************/
     default: {
        adapter: 'sails-mongo',
-      // url: 'mysql://user:password@host:port/database',
+       url: 'mongodb+srv://root:root@qbook.fzouh.mongodb.net/qbook_dev?retryWrites=true&w=majority',
       //--------------------------------------------------------------------------
       //  /\   To avoid checking it in to version control, you might opt to set
       //  ||   sensitive credentials like `url` using an environment variable.
       //
       //  For example:
       //  ```
-        sails_datastores__default__url=mongodb+srv://root:root@qbook.fzouh.mongodb.net/qbook_dev?retryWrites=true&w=majority,
+        //sails_datastores__default__url="",
 
       //--------------------------------------------------------------------------
 
@@ -147,11 +147,11 @@ module.exports = {
     * > Be sure to use the right protocol!  ("http://" vs. "https://")         *
     *                                                                          *
     ***************************************************************************/
-    cors: {
-      // allowOrigins: [
-      //   'https://example.com',
-      // ]
-    },
+    // cors: {
+    //   allowOrigins: [
+    //     'http://localhost',
+    //   ]
+    // },
 
   },
 
@@ -250,10 +250,9 @@ module.exports = {
     * > Be sure to use the right protocol!  ("http://" vs. "https://")         *
     *                                                                          *
     ***************************************************************************/
-    // onlyAllowOrigins: [
-    //   'https://example.com',
-    //   'https://staging.example.com',
-    // ],
+    onlyAllowOrigins: [
+      'https://localhost',
+    ],
 
 
     /***************************************************************************
@@ -393,7 +392,10 @@ module.exports = {
     // sails_custom__stripeSecret=sk_prod__fake_Nfgh82401348jaDa3lkZ0d9Hm
     // ```
     //--------------------------------------------------------------------------
-
+    jwtSecret:'xStmbyc066BOFn40gIr29y09Ud94z1P7',
+    jwtExpires:604800,
+    RAZOR_KEY_ID:'rzp_test_Mj02y5458xshqx',
+    RAZOR_SECRET_KEY:'tTmy6uCn0zlcRQM3nP7i2Fbd'
   },
 
 
