@@ -376,6 +376,10 @@ module.exports = {
   custom: {
     baseUrl: 'https://example.com',
     internalEmailAddress: 'support@example.com',
+    jwtSecret='xStmbyc066BOFn40gIr29y09Ud94z1P7',
+    jwtExpires:604800,
+    RAZOR_KEY_ID:'rzp_test_Mj02y5458xshqx',
+    RAZOR_SECRET_KEY:'tTmy6uCn0zlcRQM3nP7i2Fbd'
 
     // sendgridSecret: 'SG.fake.3e0Bn0qSQVnwb1E4qNPz9JZP5vLZYqjh7sn8S93oSHU',
     // stripeSecret: 'sk_prod__fake_Nfgh82401348jaDa3lkZ0d9Hm',
