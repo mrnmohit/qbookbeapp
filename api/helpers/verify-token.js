@@ -32,7 +32,7 @@ module.exports = {
 				// if there's an error verifying the token (e.g. it's invalid or expired), no go
 				if (err || !payload.user) return exits.invalid()
 				// otherwise try to look up that user
-				var user = await Users.findOne(payload.user)
+				var user = await Users.findOne({id:payload.user})
 				// if the user can't be found, no go
 				if (!user) return exits.invalid()
 				// otherwise save the user object on the request (i.e. "log in") and continue
@@ -48,8 +48,8 @@ module.exports = {
 			if (!token) return exits.invalid()
 			// if there is something, attempt to parse it as a JWT token
 			return jwt.verify(token, sails.config.jwtSecret, async function(err, payload) {
-				if (err || !payload.user) return exits.invalid()
-				var user = await Users.findOne(payload.user)
+                if (err || !payload.user) return exits.invalid()
+				var user = await Users.findOne({id:payload.user})
 				if (!user) return exits.invalid()
 				// if it got this far, everything checks out, success
 				req.user = user
