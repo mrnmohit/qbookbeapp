@@ -147,11 +147,12 @@ module.exports = {
     * > Be sure to use the right protocol!  ("http://" vs. "https://")         *
     *                                                                          *
     ***************************************************************************/
-    // cors: {
-    //   allowOrigins: [
-    //     'http://localhost',
-    //   ]
-    // },
+    cors: {
+      allowOrigins: [
+        'http://localhost',
+        'https://localhost:3000'
+      ]
+    },
 
   },
 
