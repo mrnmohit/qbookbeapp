@@ -6,6 +6,7 @@
  */
  var jwt = require('jsonwebtoken');
 
+ 
 module.exports = {
   
   login: async function (req, res) {
@@ -47,6 +48,17 @@ updateConfig: async function(req,res){
    } 
    return res.ok(setting);
 
+},
+
+dashboard: async function(req,res){
+    let user = req.user;
+    var detail = await Users.findOne({id:user.id});
+    var setting = await Setting.findOne({userId:user.id});
+
+    return res.ok({
+        'record':detail,
+        'setting':setting,
+    });
 }
 
 
