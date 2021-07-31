@@ -36,7 +36,17 @@ module.exports = {
 },
 
 updateConfig: async function(req,res){
-   return res.ok(req.user);
+   let user = req.user;
+   var setting = await Setting.findOne({userId:user.id});
+   if(!setting){
+     var data = req.body;
+     data.userId = user.id;  
+     setting = await Setting.create(req.body).fetch();
+   }else{
+       setting = await Setting.updateOne({userId:user.id}).set(req.body);
+   } 
+   return res.ok(setting);
+
 }
 
 
