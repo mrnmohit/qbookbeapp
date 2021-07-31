@@ -15,4 +15,4 @@ export NVM_DIR="$HOME/.nvm"
 npm install
 
 #start our node app in the background
-sails lift --prod > app.out.log 2> app.err.log < /dev/null &  
+npm run prod > app.out.log 2> app.err.log < /dev/null &  
