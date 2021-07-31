@@ -148,12 +148,14 @@ module.exports = {
     *                                                                          *
     ***************************************************************************/
     cors: {
+      allRoutes: true,
       allowOrigins: [
         'http://localhost',
         'https://localhost:3000'
-      ]
+      ],
+      allowCredentials: false,
     },
-
+   
   },
 
 
