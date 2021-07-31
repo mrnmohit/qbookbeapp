@@ -43,7 +43,7 @@ updateConfig: async function(req,res){
      data.userId = user.id;  
      setting = await Setting.create(req.body).fetch();
    }else{
-       setting = await Setting.updateOne({userId:user.id}).set(req.body);
+    setting = await Setting.updateOne({userId:user.id}).set(req.body);
    } 
    return res.ok(setting);
 
