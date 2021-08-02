@@ -22,6 +22,6 @@ module.exports.policies = {
   },
   BookingController: {
     '*': 'isAuthenticated',
-		login: true,
+		checkAvailability: true,
   },
 };
