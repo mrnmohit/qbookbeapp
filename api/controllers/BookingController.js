@@ -7,6 +7,9 @@
 
 module.exports = {
   
+checkAvailability:  async function(req,res){
+    
+}
 
 };
 

@@ -23,6 +23,7 @@ module.exports.routes = {
   'POST /api/v1/user/login':'UsersController.login',
   'POST /api/v1/user/updateConfig':'UsersController.updateConfig',
   'GET /api/v1/user/dashboard':'UsersController.dashboard',
+  'GET /api/v1/user/generate-code':'UsersController.generateQRCode',
 
 
   /***************************************************************************
